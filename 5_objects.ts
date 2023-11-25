@@ -10,3 +10,6 @@ let student: {
 student = {id: 1, name: 'Kavindu', age: 28, college: 'UoBolton'};
 // student = {id: 1, name: 'Kavindu', age: 28, college: 'UoBolton', subject: "SE"};
 // student = 10;
+
+//------------------------------- Distance Calculator ------------------------------------
+
