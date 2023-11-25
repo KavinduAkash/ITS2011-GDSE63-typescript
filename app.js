@@ -1,4 +1,10 @@
 // objects
+var btn_element = document.getElementById('btn');
+var location1_lat_input_element = document.getElementById('lat1');
+var location1_lon_input_element = document.getElementById('lon1');
+var location2_lat_input_element = document.getElementById('lat2');
+var location2_lon_input_element = document.getElementById('lon2');
+var result_element = document.getElementById('result');
 var student;
 student = { id: 1, name: 'Kavindu', age: 28, college: 'UoBolton' };
 // student = {id: 1, name: 'Kavindu', age: 28, college: 'UoBolton', subject: "SE"};
@@ -26,3 +32,13 @@ var location_1 = { lon: 80.7718, lat: 7.8731 }; // sri lanka
 var location_2 = { lon: 133.7751, lat: 25.2744 }; // ausi
 var distance = calcDistance(location_1, location_2);
 console.log("Distance: ".concat(distance.toFixed(2), " KM"));
+btn_element.addEventListener('click', function () {
+    var location1_lat = location1_lat_input_element.value;
+    var location1_lon = location1_lon_input_element.value;
+    var location2_lat = location2_lat_input_element.value;
+    var location2_lon = location2_lon_input_element.value;
+    var location1 = { lon: +location1_lon, lat: +location1_lat };
+    var location2 = { lon: +location2_lon, lat: +location2_lat };
+    var distance = calcDistance(location1, location2);
+    result_element.innerText = "".concat(distance.toFixed(2), " KM");
+});

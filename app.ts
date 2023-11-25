@@ -1,5 +1,15 @@
 // objects
 
+let btn_element = document.getElementById('btn');
+
+let location1_lat_input_element = document.getElementById('lat1') as HTMLInputElement;
+let location1_lon_input_element = document.getElementById('lon1') as HTMLInputElement;
+
+let location2_lat_input_element = document.getElementById('lat2') as HTMLInputElement;
+let location2_lon_input_element = document.getElementById('lon2') as HTMLInputElement;
+
+let result_element = document.getElementById('result');
+
 let student: {
   id: number;
   name: string;
@@ -46,3 +56,18 @@ let location_2 = { lon: 133.7751, lat: 25.2744 }; // ausi
 
 let distance = calcDistance(location_1, location_2);
 console.log(`Distance: ${distance.toFixed(2)} KM`);
+
+
+btn_element.addEventListener('click', () => {
+  let location1_lat = location1_lat_input_element.value;
+  let location1_lon = location1_lon_input_element.value;
+  let location2_lat = location2_lat_input_element.value;
+  let location2_lon = location2_lon_input_element.value;
+
+  let location1 = { lon: +location1_lon, lat: +location1_lat };
+  let location2 = { lon: +location2_lon, lat: +location2_lat };
+
+  let distance = calcDistance(location1, location2);
+
+  result_element.innerText = `${distance.toFixed(2)} KM`;
+});

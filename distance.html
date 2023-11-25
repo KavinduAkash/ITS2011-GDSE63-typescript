@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Distance Calculator</title>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h3 {
+            background: dodgerblue;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        button {
+            margin-top: 20px;
+        }
+        #result {
+            font-weight: bold;
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Distance Calculator</h2>
+    <form id="distanceForm">
+
+        <h3>Location 01</h3>
+        <div class="form-group">
+            <label for="lat1">Latitude of Location 1:</label>
+            <input type="text" class="form-control" id="lat1" placeholder="Enter latitude">
+        </div>
+        <div class="form-group">
+            <label for="lon1">Longitude of Location 1:</label>
+            <input type="text" class="form-control" id="lon1" placeholder="Enter longitude">
+        </div>
+
+        <h3>Location 02</h3>
+        <div class="form-group">
+            <label for="lat2">Latitude of Location 2:</label>
+            <input type="text" class="form-control" id="lat2" placeholder="Enter latitude">
+        </div>
+        <div class="form-group">
+            <label for="lon2">Longitude of Location 2:</label>
+            <input type="text" class="form-control" id="lon2" placeholder="Enter longitude">
+        </div>
+        <div class="text-center">
+            <button type="button" id="btn" class="btn btn-primary">Calculate Distance</button>
+        </div>
+    </form>
+    <div id="result" style="margin-top: 20px;"></div>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
