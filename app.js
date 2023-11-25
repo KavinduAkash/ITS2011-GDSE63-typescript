@@ -1,13 +1,28 @@
-// primitives - number, string, boolean
-function sendSum(num1, num2, name, isWithName) {
-    var result = isWithName ? "Hi ".concat(name, ", Sum is ").concat(num1 + num2) : "Sum is ".concat(num1 + num2);
-    return result;
+// functions
+function findSum(num1, num2) {
+    return num1 + num2;
 }
-var num1 = 10;
-var num2 = 10;
-var myName = 'Kavindu';
-var withName = true;
-var result1 = sendSum(10, 20, 'Kavindu', true);
-console.log(result1);
-var result2 = sendSum(10, 20, 'Kavindu', false);
-console.log(result2);
+function findSumInString(num1, num2) {
+    return "Sum is ".concat(num1 + num2);
+}
+var findSumInString2 = function (num1, num2) {
+    return "Sum is ".concat(num1 + num2);
+};
+function findTheSum(num1, num2) {
+    if (typeof num1 === 'string' || typeof num2 === 'string') { // type guard
+        return +num1 + +num2;
+    }
+    else {
+        return num1 + num2;
+    }
+}
+var result1 = findSum(10, 20);
+console.log("result1: ", result1);
+var result2 = findSumInString(10, 20);
+console.log("result2: ", result2);
+var result3 = findSumInString2(10, 20);
+console.log("result3: ", result2);
+var result4 = findTheSum(100, 200);
+console.log("result4: ", result4);
+var result5 = findTheSum('100', 200);
+console.log("result4: ", result5);
