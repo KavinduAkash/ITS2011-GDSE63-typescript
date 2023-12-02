@@ -23,11 +23,32 @@ class Account {
   }
 }
 
+let rate = 12.5;
+let accounts: Account[] = [];
+
 add_fix_btn_element.addEventListener('click', () => {
 
   let owner_name = owner_name_input_element.value;
   let fixed_amount = fixed_amount_input_element.value;
 
-  console.log(`owner= ${owner_name}, fixed amount= ${fixed_amount}`);
+  let annual_interest = (+fixed_amount * rate)/100;
 
+  let account = new Account(owner_name, +fixed_amount, rate, annual_interest);
+  accounts.push(account);
+
+  console.log(accounts);
 });
+
+
+function updateTbl() {
+  accounts.map(r => {
+
+    let record_element = document.createElement('tr');
+    let record_data = `<td>${r.owner_name}</td>
+                        <td>${r.fixed_amount}</td>
+                        <td>${r.interest_rate}</td>
+                        <td>${r.annual_interest}</td>`;
+    record_element.innerHTML = record_data;
+
+  });
+}
