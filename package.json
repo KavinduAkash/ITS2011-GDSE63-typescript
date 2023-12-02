@@ -1,0 +1,23 @@
+{
+  "name": "its2011-gdse63-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KavinduAkash/ITS2011-GDSE63-typescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KavinduAkash/ITS2011-GDSE63-typescript/issues"
+  },
+  "homepage": "https://github.com/KavinduAkash/ITS2011-GDSE63-typescript#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
