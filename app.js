@@ -1,4 +1,4 @@
-// heritage
+// abstract
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -14,37 +14,37 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var Classification;
-(function (Classification) {
-    Classification["MAMMAL"] = "MAMMAL";
-    Classification["BIRD"] = "BIRD";
-})(Classification || (Classification = {}));
-var Person = /** @class */ (function () {
-    function Person(name, nic, age) {
-        this.classification = Classification.MAMMAL;
-        this.name = name;
-        this.nic = nic;
-        this.age = age;
+var Animal = /** @class */ (function () {
+    function Animal() {
     }
-    return Person;
-}());
-var Teacher = /** @class */ (function (_super) {
-    __extends(Teacher, _super);
-    function Teacher(name, nic, age, subject, college) {
-        var _this = _super.call(this, name, nic, age) || this;
-        _this.subject = subject;
-        _this.college = college;
-        return _this;
-    }
-    Teacher.prototype.getNic = function () {
-        return this.nic;
+    Animal.prototype.eat = function () {
+        console.log("Eat via mouth");
     };
-    return Teacher;
-}(Person));
-var teacher = new Teacher("Kavindu", "1232312321", 28, "CSE", "IJSE");
-console.log(teacher.name);
-console.log(teacher.getNic());
-console.log(teacher.age);
-console.log(teacher.subject);
-console.log(teacher.college);
-console.log(teacher.classification);
+    return Animal;
+}());
+var Cat = /** @class */ (function (_super) {
+    __extends(Cat, _super);
+    function Cat() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Cat.prototype.move = function () {
+        console.log("Using legs");
+    };
+    return Cat;
+}(Animal));
+var Bird = /** @class */ (function (_super) {
+    __extends(Bird, _super);
+    function Bird() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Bird.prototype.move = function () {
+        console.log("Using feathers");
+    };
+    return Bird;
+}(Animal));
+var animal1 = new Cat();
+animal1.eat();
+animal1.move();
+var animal2 = new Bird();
+animal2.eat();
+animal2.move();
