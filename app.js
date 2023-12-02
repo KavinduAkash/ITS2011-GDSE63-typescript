@@ -1,50 +1,28 @@
-// abstract
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var Animal = /** @class */ (function () {
-    function Animal() {
+// generic
+var Student = /** @class */ (function () {
+    function Student(name, age) {
+        this.name = name;
+        this.age = age;
     }
-    Animal.prototype.eat = function () {
-        console.log("Eat via mouth");
-    };
-    return Animal;
+    return Student;
 }());
-var Cat = /** @class */ (function (_super) {
-    __extends(Cat, _super);
-    function Cat() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Cat.prototype.move = function () {
-        console.log("Using legs");
-    };
-    return Cat;
-}(Animal));
-var Bird = /** @class */ (function (_super) {
-    __extends(Bird, _super);
-    function Bird() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Bird.prototype.move = function () {
-        console.log("Using feathers");
-    };
-    return Bird;
-}(Animal));
-var animal1 = new Cat();
-animal1.eat();
-animal1.move();
-var animal2 = new Bird();
-animal2.eat();
-animal2.move();
+var array1 = [1, 2, 3, 4, 5, 6, 7];
+var array2 = ["Hello", "IJSE", "GDSE", "TypeScript"];
+var array3 = [new Student("Kavindu", 28),
+    new Student("Kalum", 25),
+    new Student("Pathum", 20)];
+var array4 = [true, false, true, false];
+// function removeLastItem(array: (number | string | Student | boolean)[]): (number | string | Student | boolean)[] {
+//   return array.slice(0, array.length - 1);
+// }
+function removeLastItem(array) {
+    return array.slice(0, array.length - 1);
+}
+var result1 = removeLastItem(array1);
+console.log(result1);
+var result2 = removeLastItem(array2);
+console.log(result2);
+var result3 = removeLastItem(array3);
+console.log(result3);
+var result4 = removeLastItem(array4);
+console.log(result4);
