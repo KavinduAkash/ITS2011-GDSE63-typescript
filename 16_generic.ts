@@ -13,8 +13,8 @@ class Student {
 let array1: number[] = [1, 2, 3, 4, 5, 6, 7];
 let array2: string[] = ["Hello", "IJSE", "GDSE", "TypeScript"];
 let array3: Student[] = [new Student("Kavindu", 28),
-                          new Student("Kalum", 25),
-                          new Student("Pathum", 20)];
+  new Student("Kalum", 25),
+  new Student("Pathum", 20)];
 let array4: boolean[] = [true, false, true, false];
 
 
